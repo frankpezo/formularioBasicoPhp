@@ -60,6 +60,7 @@ form input[type="submit"]:hover{
 
 /*  Para el mensaje de error y éxito*/
 .alert{
+    width: 90%;
     padding: 1em;
     color: #fff;
     border-radius: 2px;
@@ -71,4 +72,8 @@ form input[type="submit"]:hover{
     background: #F2DEDE;
     border: 1px solid #a94442;
     color: #a94442;
+}
+
+.alert.success{
+    background: #4CAF50;
 }

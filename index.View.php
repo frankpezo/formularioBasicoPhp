@@ -14,12 +14,12 @@
             <input type="text" name="email" id=""  placeholder="Email" value"="">
             <textarea name="mensaje" placeholder="Mensaje"></textarea>
             <!-- mensaje de error-->
-            <div class="alert error">
+           <!--  <div class="alert error">
                 Lorem ipsum dolor sit amet consectetur adipisicing.
             </div>
             <div class="alert success">
                 Lorem ipsum dolor sit amet consectetur adipisicing.
-            </div>
+            </div> -->
             <input type="submit"  name="submit" value="Enviar">
         </form>
      </div>
