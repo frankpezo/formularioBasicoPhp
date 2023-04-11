@@ -30,6 +30,29 @@ if( isset($_POST['submit'])){
     $errores .= "Ingrese un correo <br />";
  }
 
+ //Mensaje
+ if(!empty($mensaje)){
+    $mensaje = trim($mensaje);
+    $mensaje = htmlspecialchars($mensaje);
+    $mensaje = stripslashes($mensaje);
+ }else{
+    $errores .= "Ingrese un mensaje <br />";
+ }
+
+ //Si no hay errores
+ if(!$errores){
+    $envioMensaje = 'frank@gmail.com';
+    $asunto = 'Correo enviado desde miPagina.com';
+    $mensajePreparado = "De: $nombre \n";
+    $mensajePreparado .= "Correo: $correo \n";
+    $mensajePreparado .= "Mensaje: " . $mensaje;
+    //Usamos la función mail() para enviar el correo
+    //Esta función no nos funcionará en el localhost utilizando el xamp,
+    //solo funcionará en un servidor real, al menos que hagamos una configuración especial
+   /*   */
+    $enviar = 'true';
+ }
+
 
 }
 
