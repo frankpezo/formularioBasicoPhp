@@ -9,17 +9,22 @@
 </head>
 <body>
      <div class="wrap">
-        <form action="">
+        <!-- No olvidemos ponder para que se envie en el mismo archivo y con el método POST-->
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);  ?>" method ='POST'>
             <input type="text" name="nombre" id="" placeholder="Nombre" value="">
             <input type="text" name="email" id=""  placeholder="Email" value"="">
             <textarea name="mensaje" placeholder="Mensaje"></textarea>
             <!-- mensaje de error-->
-           <!--  <div class="alert error">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
+             <?php if(!empty($errores)):?>
+               <div class="alert error"> 
+                 <?php echo $errores; ?>
             </div>
-            <div class="alert success">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-            </div> -->
+         
+             <?php elseif($enviar): ?>
+                   <div class="alert success">
+                       <p>Enviado Correctamente</p>
+                   </div> 
+            <?php endif;?>
             <input type="submit"  name="submit" value="Enviar">
         </form>
      </div>
